@@ -1,0 +1,40 @@
+.clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 640px;
+  }
+
+  @media @desktop-widths {
+    width: 960px
+  }
+}
+
+.container-fluid() {
+  // width: auto;
+  //
+  @media @tablet-widths {
+    width: 94%;
+    /* 678px / 768px ~= 88% */
+    // max-width: 1200px;
+    // /* 1410px / 0.84 ~= 1142px
+    // (центровка начнется чуть раньше 1200px)*/
+    margin: 0 auto;
+  }
+
+  @media @desktop-widths {
+    min-width: 1170px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
