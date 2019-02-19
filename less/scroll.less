@@ -1,0 +1,43 @@
+.scroll {
+  margin-top: 20vh;
+  opacity: 0;
+  animation-name: show-me;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 6.5s;
+}
+
+.scroll__light {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 8px 0 0 0;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation-name: blink;
+  animation-duration: 2700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:nth-of-type(1) {
+    animation-delay: 520ms;
+  }
+
+  &:nth-of-type(2) {
+    animation-delay: 640ms;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: 760ms;
+  }
+
+  &:nth-of-type(4) {
+    animation-delay: 880ms;
+  }
+}

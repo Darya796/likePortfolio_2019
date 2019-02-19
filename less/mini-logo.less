@@ -1,0 +1,45 @@
+.mini-logo {
+  display: flex;
+  align-items: center;
+  font-family: "Gotham", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: @white;
+  opacity: 0;
+  animation-name: show-me;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.8s;
+}
+
+.mini-logo__thin {
+  position: relative;
+  padding-left: 50px;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  opacity: 0;
+  //transition: 0.5s;
+  transform: translateX(-30%);
+  animation-name: show-2;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.1s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    width: 23px;
+    height: 2px;
+    background: @white;
+    transform: translateY(-15%);
+    opacity: 0;
+    //transition: 0.5s;
+    animation-name: show-me;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+  }
+}

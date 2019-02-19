@@ -1,7 +1,115 @@
-/*  FOR  */
-//@keyframes name {
-//  0% {
-//  }
-//  100% {
-//  }
-//}
+/*  FOR SCROLL  */
+@keyframes blink {
+  0% {
+    opacity: 0;
+    //transform: translate3d(0, -4px, 0);
+  }
+
+  33.3333333% {
+    opacity: 1;
+    //transform: translate3d(0, 2px, 0);
+  }
+
+  66.6666667% {
+    opacity: 0;
+    //transform: translate3d(0, -2px, 0);
+  }
+
+  100% {
+    opacity: 0;
+    //transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/*  FOR LOGO SMOKE  */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg) translateY(15px);
+    //opacity: 0.9;
+  }
+}
+
+@keyframes rotate-shadow {
+  0% {
+    //opacity: 0.9;
+  }
+  50% {
+    //opacity: 0.3;
+  }
+  100% {
+    //opacity: 0.9;
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes line-bezier {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  49% {
+    transform: translateX(0);
+  }
+  51% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes show-me {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes refill {
+  0% {
+    color: @white;
+  }
+  100% {
+    color: @violet;
+  }
+}
+
+
+@keyframes scale-bg {
+  0% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-grid {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    //opacity: 1;
+    opacity: 0.1;
+  }
+}

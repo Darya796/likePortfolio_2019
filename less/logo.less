@@ -1,0 +1,111 @@
+.logo__container {
+  position: relative;
+  padding: 0 15px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: @white;
+    transform: translateX(-101%);
+    animation: line-bezier 1.5s cubic-bezier(.77, 0, .18, 1) forwards;
+    animation-delay: 3.4s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: @violet;
+    transform: translateX(-101%);
+    animation: line-bezier 1.5s cubic-bezier(.77, 0, .18, 1) forwards;
+    animation-delay: 4.5s;
+  }
+}
+
+.logo {
+  margin-bottom: 4px;
+  font-family: "Gotham", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: @white;
+  letter-spacing: -1.1px;
+
+  opacity: 0;
+  animation-name: show-me;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.1s;
+}
+
+.logo__violet {
+  color: @white;
+  animation-name: refill;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.8s;
+}
+
+.logo__hidden {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+
+  //animation-name: smoke-o;
+  //animation-duration: 0.4s;
+  //animation-fill-mode: forwards;
+  //animation-delay: 4.9s;
+  &--smoke {
+    color: transparent;
+    background: url("../img/logo-letter.png") no-repeat center;
+    background-size: contain;
+    animation-name: rotate;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: rotate(0deg) translateY(15px);
+    transform-origin: 50% 110%;
+    //opacity: 0.9;
+  }
+
+  &--smoke::before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: url("../img/logo-letter.png") no-repeat center;
+    background-size: contain;
+    animation-name: rotate-shadow;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    //opacity: 0.9;
+  }
+
+  &--smoke::after {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -20%;
+    width: 130%;
+    height: 130%;
+    background: url("../img/logo-letter.png") no-repeat center;
+    background-size: contain;
+    animation-name: rotate-shadow;
+    animation-duration: 5.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    //opacity: 0.7;
+  }
+}

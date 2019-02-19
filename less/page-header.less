@@ -1,0 +1,24 @@
+.page-header {}
+
+.page-header__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 15px 0;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 0;
+    width: 100%;
+    height: ~"calc(100% - 24px)";
+    background: @white;
+    transform: translateX(-101%);
+    animation: line-bezier 1.8s cubic-bezier(.77,0,.18,1) forwards;
+    animation-delay: 3.1s;
+  }
+}
+

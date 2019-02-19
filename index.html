@@ -8,5 +8,77 @@
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
+
+<div class="page-background"></div>
+
+<section class="grid">
+    <span class="grid__line"></span>
+    <span class="grid__line"></span>
+    <span class="grid__line"></span>
+</section>
+
+<header class="page-header">
+    <input class="hidden-input" type="checkbox" id="mobile-nav">
+    <div class="page-header__wrapper">
+
+        <span class="mini-logo">&lt;lP&gt;<b class="mini-logo__thin">Development</b></span>
+
+        <nav class="main-nav">
+
+            <label class="main-nav__toggle" for="mobile-nav">menu</label>
+
+            <!--<div>-->
+            <!--<a href=""></a>-->
+            <!--<a href=""></a>-->
+            <!--<a href=""></a>-->
+            <!--</div>-->
+
+        </nav>
+
+    </div>
+</header>
+
+<section class="home">
+    <div class="home__wrapper">
+
+        <div class="logo__container">
+            <h1 class="logo">&lt;<span class="logo__violet">like</span>P<span class="logo__hidden">o</span>rtfolio/&gt;</h1>
+        </div>
+
+        <div class="home__author-name-container">
+            <strong class="home__author-name">{Darya}</strong>
+        </div>
+
+        <button type="button" class="scroll">
+            <span class="scroll__light"></span>
+            <span class="scroll__light"></span>
+            <span class="scroll__light"></span>
+            <span class="scroll__light"></span>
+        </button>
+
+    </div>
+</section>
+
+
+<script>
+    window.onload = function () {
+
+        setTimeout(function () {
+            document.querySelector(".logo__hidden").classList.add("logo__hidden--smoke");
+        }, 4900);
+
+        // setTimeout(function () {
+        //     document.querySelector(".page-background").classList.add("page-background--showed");
+        // }, 1000);
+        //
+        // setTimeout(function () {
+        //     document.querySelector(".grid").classList.add("grid--showed");
+        // }, 2100);
+
+
+        // window.onresize = function () {
+        // };
+    };
+</script>
 </body>
 </html>
