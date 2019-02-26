@@ -11,23 +11,24 @@
   height: 100vh;
   transform: translateX(-50%) scale(0);
   z-index: -1;
-  //transition: 1s;
   opacity: 0;
 
   animation-name: scale-grid;
   animation-duration: 1.4s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  //animation-delay: 2s;
   animation-delay: 4.7s;
-  //&--showed {
-  //  transform: translateX(-50%) scale(1);
-  //  opacity: 0.1;
-  //}
 }
 
 .grid__line {
   width: 1px;
   height: 100%;
   background: @white;
+}
+
+@media @desktop-widths {
+  .grid {
+    width: 800px;
+    max-width: none;
+  }
 }

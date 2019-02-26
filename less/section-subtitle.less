@@ -1,0 +1,31 @@
+.section-subtitle {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  font-family: "Gotham", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: @white;
+  text-align: center;
+  background: green;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: red;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: red;
+  }
+}

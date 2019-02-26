@@ -42,7 +42,8 @@
     <div class="home__wrapper">
 
         <div class="logo__container">
-            <h1 class="logo">&lt;<span class="logo__violet">like</span>P<span class="logo__hidden">o</span>rtfolio/&gt;</h1>
+            <h1 class="logo">&lt;<span class="logo__violet">like</span>P<span class="logo__hidden">o</span>rtfolio/&gt;
+            </h1>
         </div>
 
         <div class="home__author-name-container">
@@ -59,12 +60,44 @@
     </div>
 </section>
 
+<section class="works">
+    <div class="works__wrapper">
 
+        <h2 class="section-title">Works<span class="section-title__violet-slash">/</span></h2>
+
+        <p class="section-subtitle">see my style</p>
+
+        <div class="works__slider">
+
+            <div class="works__slider-item">
+                <a class="works__slider-link" href="#"></a>
+
+                <div class="works__img-container">
+                    <img class="works__img" src="" alt="preview">
+                </div>
+
+                <div class="works__text-container">
+                    <h3 class="works__project-name">Mountain/</h3>
+
+                    <p class="works__project-description">Web page  for
+                        <span class="works__project-description__violet">{mountain}</span>
+                        agency
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script>
     window.onload = function () {
 
         setTimeout(function () {
-            document.querySelector(".logo__hidden").classList.add("logo__hidden--smoke");
+            $(".logo__hidden").addClass("logo__hidden--smoke");
         }, 4900);
 
         // setTimeout(function () {

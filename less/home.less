@@ -1,18 +1,20 @@
-.home {}
+.home {
+  background: rgba(255, 0, 0, 0.3);
+}
 
 .home__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 36vh 0 0;
-  min-height: 90vh;
-  //background: rgba(255, 0, 0, 0.3);
+  min-height: 91vh;
 }
 
 .home__author-name-container {
   position: relative;
   align-self: flex-start;
-  padding: 0 15px;
+  padding: 0 5vw;
+  //padding: 0 15px;
   overflow: hidden;
 
   &::before {
@@ -24,6 +26,7 @@
     height: 100%;
     background: @white;
     transform: translateX(-101%);
+
     animation: line-bezier 1.2s cubic-bezier(.77, 0, .18, 1) forwards;
     animation-delay: 3.9s;
   }
@@ -34,12 +37,13 @@
   padding-left: 12vw;
   font-family: "Gotham", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 5vw;
+  //font-size: 14px;
   color: @white;
   letter-spacing: -0.2px;
-
   opacity: 0;
-  animation-name: show-me;
+
+  animation-name: opacity;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-delay: 4.3s;
@@ -47,11 +51,61 @@
   &::before {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: 4px;
-    width: 18px;
-    height: 2px;
+    width: 7vw;
+    //width: 24px;
+    height: 3px;
     background: @white;
-    transform: translateY(-15%);
+    opacity: 0;
+
+    animation-name: opacity;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4.8s;
+  }
+}
+
+@media @tablet-widths {
+  .home__wrapper {
+    padding: 32vh 0 0;
+  }
+
+  .home__author-name-container {
+    padding: 0 6vw;
+  }
+
+  .home__author-name {
+    padding-left: 13vw;
+
+    &::before {
+      width: 9vw;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .home__wrapper {
+    //padding: 340px 0 0;
+    padding: 37vh 0 0;
+    //background: rgba(255, 0, 0, 0.2);
+  }
+
+  .home__author-name-container {
+    padding: 0 8vw;
+  }
+
+  .home__author-name {
+    margin-left: -3px;
+    padding-left: 108px;
+    //padding-left: 13vw;
+    //font-size: 5vw;
+    font-size: 2.5vw;
+    //font-size: 48px;
+
+    &::before {
+      width: 70px;
+      //width: 9vw;
+    }
   }
 }

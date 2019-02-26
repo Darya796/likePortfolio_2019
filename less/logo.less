@@ -1,6 +1,8 @@
 .logo__container {
   position: relative;
-  padding: 0 15px;
+  padding: 0 5vw;
+  //padding: 0 15px;
+  width: 100%;
   overflow: hidden;
 
   &::before {
@@ -12,6 +14,7 @@
     height: 100%;
     background: @white;
     transform: translateX(-101%);
+
     animation: line-bezier 1.5s cubic-bezier(.77, 0, .18, 1) forwards;
     animation-delay: 3.4s;
   }
@@ -25,6 +28,7 @@
     height: 100%;
     background: @violet;
     transform: translateX(-101%);
+
     animation: line-bezier 1.5s cubic-bezier(.77, 0, .18, 1) forwards;
     animation-delay: 4.5s;
   }
@@ -34,12 +38,13 @@
   margin-bottom: 4px;
   font-family: "Gotham", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 11vw;
   color: @white;
-  letter-spacing: -1.1px;
+  letter-spacing: -0.4vw;
+  //letter-spacing: -1.1px;
 
   opacity: 0;
-  animation-name: show-me;
+  animation-name: opacity;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-delay: 4.1s;
@@ -47,6 +52,7 @@
 
 .logo__violet {
   color: @white;
+
   animation-name: refill;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
@@ -56,24 +62,19 @@
 .logo__hidden {
   position: relative;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 7vw;
+  height: 100%;
 
-  //animation-name: smoke-o;
-  //animation-duration: 0.4s;
-  //animation-fill-mode: forwards;
-  //animation-delay: 4.9s;
   &--smoke {
     color: transparent;
-    background: url("../img/logo-letter.png") no-repeat center;
-    background-size: contain;
+    background: url("../img/logo-letter.png") no-repeat center 70%;
+    background-size: 7vw;
+
     animation-name: rotate;
     animation-duration: 9s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    transform: rotate(0deg) translateY(15px);
-    transform-origin: 50% 110%;
-    //opacity: 0.9;
+    transform-origin: 50% 60%;
   }
 
   &--smoke::before {
@@ -84,28 +85,71 @@
     width: 110%;
     height: 110%;
     background: url("../img/logo-letter.png") no-repeat center;
-    background-size: contain;
-    animation-name: rotate-shadow;
+    background-size: 6vw;
+
+    animation-name: rotate;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    //opacity: 0.9;
   }
 
   &--smoke::after {
     content: "";
     position: absolute;
-    top: -15%;
-    left: -20%;
-    width: 130%;
-    height: 130%;
+    top: 0;
+    left: -5%;
+    width: 120%;
+    height: 120%;
     background: url("../img/logo-letter.png") no-repeat center;
-    background-size: contain;
-    animation-name: rotate-shadow;
+    background-size: 7vw;
+
+    animation-name: rotate;
     animation-duration: 5.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    //opacity: 0.7;
+  }
+}
+
+@media @tablet-widths {
+  .logo__container {
+    padding: 0 6vw;
+  }
+}
+
+@media @desktop-widths {
+  .logo__container {
+    padding: 0 8vw;
+  }
+
+  .logo {
+    margin-left: -6px;
+    margin-bottom: 15px;
+    font-size: 6.3vw;
+    //font-size: 120px;
+    letter-spacing: -0.15vw;
+    //letter-spacing: -2.8px;
+  }
+
+  .logo__hidden {
+    width: 4vw;
+    //width: 70px;
+
+    &--smoke {
+      background-size: 4.2vw;
+      //background-size: 80px;
+    }
+
+    &--smoke::before {
+      left: -3%;
+      background-size: 4vw;
+      //background-size: 70px;
+    }
+
+    &--smoke::after {
+      left: -3%;
+      background-size: 4.2vw;
+      //background-size: 80px;
+    }
   }
 }

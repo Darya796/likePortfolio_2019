@@ -5,7 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 15px 0;
+  padding: 24px 5vw 0;
+  //padding: 24px 15px 0;
   overflow: hidden;
 
   &::before {
@@ -17,8 +18,31 @@
     height: ~"calc(100% - 24px)";
     background: @white;
     transform: translateX(-101%);
+
     animation: line-bezier 1.8s cubic-bezier(.77,0,.18,1) forwards;
     animation-delay: 3.1s;
   }
 }
 
+@media @tablet-widths {
+  .page-header__wrapper {
+    padding: 32px 6vw 0;
+    //padding: 32px 50px 0;
+
+    &::before {
+      top: 32px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-header__wrapper {
+    padding: 39px 8vw 0;
+    //padding: 35px 160px 0;
+    //background: rgba(255, 0, 0, 0.15);
+
+    &::before {
+      top: 39px;
+    }
+  }
+}

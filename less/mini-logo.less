@@ -6,7 +6,8 @@
   font-size: 24px;
   color: @white;
   opacity: 0;
-  animation-name: show-me;
+
+  animation-name: opacity;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-delay: 3.8s;
@@ -19,9 +20,9 @@
   font-size: 12px;
   letter-spacing: -0.2px;
   opacity: 0;
-  //transition: 0.5s;
   transform: translateX(-30%);
-  animation-name: show-2;
+
+  animation-name: opacity-translateX;
   animation-duration: 1.3s;
   animation-fill-mode: forwards;
   animation-delay: 4.1s;
@@ -36,10 +37,43 @@
     background: @white;
     transform: translateY(-15%);
     opacity: 0;
-    //transition: 0.5s;
-    animation-name: show-me;
+
+    animation-name: opacity;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-delay: 5s;
+  }
+}
+
+@media @tablet-widths {
+  .mini-logo {
+    font-size: 48px;
+  }
+
+  .mini-logo__thin {
+    padding-left: 120px;
+    font-size: 20px;
+
+    &::before {
+      left: 36px;
+      width: 48px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .mini-logo {
+    font-size: 32px;
+  }
+
+  .mini-logo__thin {
+    padding-left: 105px;
+    font-size: 18px;
+    letter-spacing: -0.1px;
+
+    &::before {
+      left: 23px;
+      width: 51px;
+    }
   }
 }
