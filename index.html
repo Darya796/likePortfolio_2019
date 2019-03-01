@@ -61,70 +61,70 @@
     </div>
 </section>
 
-<section class="works">
-    <div class="works__wrapper">
+<!--<section class="works">-->
+    <!--<div class="works__wrapper">-->
 
-        <h2 class="section-title">Works<span class="section-title__violet-slash">/</span></h2>
+        <!--<h2 class="section-title">Works<span class="section-title__violet-slash">/</span></h2>-->
 
-        <p class="section-subtitle">see my style</p>
+        <!--<p class="section-subtitle">see my style</p>-->
 
-        <div class="works__slider">
+        <!--<div class="works__slider">-->
 
-            <div class="works__slider-item">
-                <a class="works__slider-link" href="#"></a>
+            <!--<div class="works__slider-item">-->
+                <!--<a class="works__slider-link" href="#"></a>-->
 
-                <div class="works__img-container">
-                    <img class="works__img" src="img/photo-4.jpg" alt="preview">
-                </div>
+                <!--<div class="works__img-container">-->
+                    <!--<img class="works__img" src="img/photo-4.jpg" alt="preview">-->
+                <!--</div>-->
 
-                <div class="works__text-container">
-                    <h3 class="works__project-name">Mountain<span class="works__project-name__slash">/</span></h3>
+                <!--<div class="works__text-container">-->
+                    <!--<h3 class="works__project-name">Mountain<span class="works__project-name__slash">/</span></h3>-->
 
-                    <p class="works__project-description">Web page  for
-                        <span class="works__project-description__violet">mountain</span>
-                        agency
-                    </p>
-                </div>
-            </div>
+                    <!--<p class="works__project-description">Web page  for-->
+                        <!--<span class="works__project-description__violet">mountain</span>-->
+                        <!--agency-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="works__slider-item">
-                <a class="works__slider-link" href="#"></a>
+            <!--<div class="works__slider-item">-->
+                <!--<a class="works__slider-link" href="#"></a>-->
 
-                <div class="works__img-container">
-                    <img class="works__img" src="img/photo-4.jpg" alt="preview">
-                </div>
+                <!--<div class="works__img-container">-->
+                    <!--<img class="works__img" src="img/photo-4.jpg" alt="preview">-->
+                <!--</div>-->
 
-                <div class="works__text-container">
-                    <h3 class="works__project-name">Soundpro<span class="works__project-name__slash">/</span></h3>
+                <!--<div class="works__text-container">-->
+                    <!--<h3 class="works__project-name">Soundpro<span class="works__project-name__slash">/</span></h3>-->
 
-                    <p class="works__project-description">Social network  for
-                        <span class="works__project-description__violet">soundpro</span>
-                        team
-                    </p>
-                </div>
-            </div>
+                    <!--<p class="works__project-description">Social network  for-->
+                        <!--<span class="works__project-description__violet">soundpro</span>-->
+                        <!--team-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="works__slider-item">
-                <a class="works__slider-link" href="#"></a>
+            <!--<div class="works__slider-item">-->
+                <!--<a class="works__slider-link" href="#"></a>-->
 
-                <div class="works__img-container">
-                    <img class="works__img" src="img/photo-4.jpg" alt="preview">
-                </div>
+                <!--<div class="works__img-container">-->
+                    <!--<img class="works__img" src="img/photo-4.jpg" alt="preview">-->
+                <!--</div>-->
 
-                <div class="works__text-container">
-                    <h3 class="works__project-name">Lifestyle<span class="works__project-name__slash">/</span></h3>
+                <!--<div class="works__text-container">-->
+                    <!--<h3 class="works__project-name">Lifestyle<span class="works__project-name__slash">/</span></h3>-->
 
-                    <p class="works__project-description">UX design for
-                        <span class="works__project-description__violet">city style</span>
-                        project
-                    </p>
-                </div>
-            </div>
+                    <!--<p class="works__project-description">UX design for-->
+                        <!--<span class="works__project-description__violet">city style</span>-->
+                        <!--project-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
-        </div>
+        <!--</div>-->
 
-    </div>
-</section>
+    <!--</div>-->
+<!--</section>-->
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/slick.min.js"></script>
@@ -148,51 +148,60 @@
         // };
 
         /*==============================*/
-        $(window).on('load resize', function () {
-            if ($(window).width() < 1200) {
-                $('.works__slider:not(.slick-initialized)').slick({
-                    mobileFirst: true,
-                    touchThreshold: 10,
-                    infinite: false,
-                    edgeFriction: 0.05,
-                    dots: true,
-                    arrows: false,
-                    responsive: [
-                        {
-                            breakpoint: 0,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                                centerMode: true,
-                                centerPadding: "14%"
-                            }
-                        },
-                        // {
-                        //     breakpoint: 767,
-                        //     settings: {
-                        //         arrows: false,
-                        //         slidesToShow: 2,
-                        //         slidesToScroll: 2
-                        //     }
-                        // },
-                        // {
-                        //     breakpoint: 1023,
-                        //     settings: {
-                        //         arrows: false,
-                        //         slidesToShow: 3,
-                        //         slidesToScroll: 3
-                        //     }
-                        // },
-                        // {
-                        //     breakpoint: 1199,
-                        //     settings: "unslick"
-                        // }
-                    ]
-                });
-            } else {
-                $('.works__slider.slick-initialized').slick("unslick");
-            }
-        });
+        // $(window).on('load resize', function () {
+        //     if ($(window).width() < 1200) {
+        //         $('.works__slider:not(.slick-initialized)').slick({
+        //             mobileFirst: true,
+        //             touchThreshold: 10,
+        //             infinite: false,
+        //             edgeFriction: 0.05,
+        //             dots: true,
+        //             arrows: false,
+        //             responsive: [
+        //                 {
+        //                     breakpoint: 0,
+        //                     settings: {
+        //                         slidesToShow: 1,
+        //                         slidesToScroll: 1,
+        //                         centerMode: true,
+        //                         centerPadding: "14%"
+        //                     }
+        //                 },
+        //                 // {
+        //                 //     breakpoint: 599,
+        //                 //     settings: {
+        //                 //         slidesToShow: 2,
+        //                 //         slidesToScroll: 1,
+        //                 //         centerMode: true,
+        //                 //         centerPadding: "14%"
+        //                 //     }
+        //                 // },
+        //                 // {
+        //                 //     breakpoint: 767,
+        //                 //     settings: {
+        //                 //         arrows: false,
+        //                 //         slidesToShow: 2,
+        //                 //         slidesToScroll: 2
+        //                 //     }
+        //                 // },
+        //                 // {
+        //                 //     breakpoint: 1023,
+        //                 //     settings: {
+        //                 //         arrows: false,
+        //                 //         slidesToShow: 3,
+        //                 //         slidesToScroll: 3
+        //                 //     }
+        //                 // },
+        //                 // {
+        //                 //     breakpoint: 1199,
+        //                 //     settings: "unslick"
+        //                 // }
+        //             ]
+        //         });
+        //     } else {
+        //         $('.works__slider.slick-initialized').slick("unslick");
+        //     }
+        // });
     });
 </script>
 </body>

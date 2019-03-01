@@ -544,7 +544,7 @@ input::-webkit-inner-spin-button {
   100% {
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
-    opacity: 0.05;
+    opacity: 0.1;
   }
 }
 @keyframes scale-grid {
@@ -556,7 +556,7 @@ input::-webkit-inner-spin-button {
   100% {
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
-    opacity: 0.05;
+    opacity: 0.1;
   }
 }
 .page-background {
@@ -1172,6 +1172,8 @@ input::-webkit-inner-spin-button {
   position: relative;
   padding-left: 38px;
   padding-bottom: 40px;
+  background: rgba(255, 0, 0, 0.4);
+  /*-------------------------------------------------------------------------------*/
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0.4;
@@ -1189,8 +1191,8 @@ input::-webkit-inner-spin-button {
   margin-left: -16px;
   padding-top: 12px;
   padding-bottom: 22px;
-  width: 169px;
-  height: 208px;
+  width: 53vw;
+  height: 65vw;
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1277,13 +1279,14 @@ input::-webkit-inner-spin-button {
 /*====================================================*/
 .slick-current {
   padding-left: 38px;
+  background: rgba(0, 0, 255, 0.2);
+  /*-------------------------------------------------------------------------------*/
   opacity: 1;
 }
 .slick-current .works__img-container {
   margin-left: auto;
   padding-top: 0;
   padding-bottom: 0;
-  width: 191px;
 }
 .slick-current .works__text-container {
   left: 0;
