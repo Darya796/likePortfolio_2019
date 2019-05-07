@@ -1,12 +1,14 @@
 .section-subtitle {
   position: relative;
   display: inline-block;
-  margin-bottom: 48px;
-  width: 150px;
+  margin-bottom: 30px;
+  //width: 150px;
+  width: 48%;
   font-family: "Gotham", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: -0.5px;
+  font-weight: 700;
+  font-size: 4vw;
+  //font-size: 18px;
+  letter-spacing: -0.2px;
   color: @white;
   text-align: center;
   //background: rgba(0, 255, 0, 0.3); /*-------------------------------------------------------------------------------*/
@@ -16,15 +18,52 @@
     content: "";
     position: absolute;
     top: 55%;
-    width: 18px;
+    width: 20px;
     height: 2px;
     background: @violet;
   }
 
   &::before {
-    left: -17px;
+    left: -20px;
   }
   &::after {
-    right: -17px;
+    right: -20px;
+  }
+}
+
+@media (min-width: 400px) {
+  .section-subtitle {
+    width: auto;
+    //width: 170px;
+    //width: 48%;
+    //font-size: 5vw;
+    font-size: 20px;
+
+    &::before {
+      left: -45px;
+    }
+    &::after {
+      right: -45px;
+    }
+  }
+}
+
+@media @tablet-widths {
+  .section-subtitle {
+    margin-bottom: 110px;
+    width: auto;
+    font-size: 35px;
+
+    &::before,
+    &::after {
+      width: 75px;
+    }
+
+    &::before {
+      left: -110px;
+    }
+    &::after {
+      right: -110px;
+    }
   }
 }
