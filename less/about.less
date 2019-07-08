@@ -1,4 +1,6 @@
 .about {
+  margin: 0 auto;
+  max-width: 1903px;
   overflow: hidden;
 }
 
@@ -48,7 +50,7 @@
 
   &--start::before {
     animation-name: opacity;
-    animation-duration: 0.7s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-delay: 2.5s;
   }
@@ -72,7 +74,7 @@
 
   transition: 2s;
   transform: scale(0.8);
-  transition-delay: 2s;
+  transition-delay: 1.3s;
   transform-origin: 50% 50%;
   opacity: 0;
 
@@ -236,6 +238,13 @@
 }
 
 @media @desktop-widths {
+  .about__content-container {
+    &::before {
+      top: -71px;
+      height: 200px;
+    }
+  }
+
   .about__text-container {
     &::before {
       content: "";

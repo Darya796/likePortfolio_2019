@@ -1,9 +1,202 @@
-.page-footer {}
+.page-footer {
+  margin: 0 auto;
+  max-width: 1903px;
+  //background: rgba(255, 255, 0, 0.1);
 
-.page-footer__wrapper {}
+  transition: 2s;
+  transform: scale(0.8);
+  //transition-delay: 1s;
+  transform-origin: 50% 50%;
+  opacity: 0;
 
-.page-footer__social-list {}
+  &--start {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-.page-footer__social-link {}
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 0 45px;
+}
 
-.page-footer__copyrights {}
+.page-footer__social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+  width: 250px;
+  //background: rgba(255, 0, 0, 0.3);
+}
+
+.page-footer__social-link {
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  opacity: 0.5;
+  transition: 0.3s;
+
+  &--git {
+    background: url("../img/github.svg") no-repeat center;
+    background-size: 30px;
+  }
+
+  &--gmail {
+    background: url("../img/gmail.svg") no-repeat center;
+    background-size: 34px;
+  }
+
+  &--ln {
+    background: url("../img/linkedin.svg") no-repeat center;
+    background-size: 34px;
+  }
+
+  &--codepen {
+    background: url("../img/codepen.svg") no-repeat center;
+    background-size: 34px;
+  }
+
+  &--git:active {
+    background: url("../img/github--hover.svg") no-repeat center;
+    background-size: 30px;
+    opacity: 1;
+  }
+
+  &--gmail:active {
+    background: url("../img/gmail--hover.svg") no-repeat center;
+    background-size: 34px;
+    opacity: 1;
+  }
+
+  &--ln:active {
+    background: url("../img/linkedin--hover.svg") no-repeat center;
+    background-size: 34px;
+    opacity: 1;
+  }
+
+  &--codepen:active {
+    background: url("../img/codepen--hover.svg") no-repeat center;
+    background-size: 34px;
+    opacity: 1;
+  }
+}
+
+.page-footer__copyrights {
+  font-family: "Gotham", "Arial", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: @white;
+  text-align: center;
+  opacity: 0.3;
+}
+
+@media @tablet-widths {
+  .page-footer__wrapper {
+    padding: 125px 0 75px;
+  }
+
+  .page-footer__social-list {
+    margin-bottom: 35px;
+  }
+
+  .page-footer__copyrights br {
+    display: none;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer__wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 7vw 85px;
+    //max-width: 1602px;
+  }
+
+  .page-footer__social-list {
+    order: 2;
+    margin-bottom: 0;
+    width: 180px;
+  }
+
+  .page-footer__social-link {
+    width: 20px;
+    height: 20px;
+
+    &--git {
+      background: url("../img/github.svg") no-repeat center;
+      background-size: 17px;
+    }
+
+    &--gmail {
+      background: url("../img/gmail.svg") no-repeat center;
+      background-size: 20px;
+    }
+
+    &--ln {
+      background: url("../img/linkedin.svg") no-repeat center;
+      background-size: 17px;
+    }
+
+    &--codepen {
+      background: url("../img/codepen.svg") no-repeat center;
+      background-size: 20px;
+    }
+
+    &--git:active {
+      background: url("../img/github.svg") no-repeat center;
+      background-size: 17px;
+      opacity: 0.5;
+    }
+
+    &--gmail:active {
+      background: url("../img/gmail.svg") no-repeat center;
+      background-size: 20px;
+      opacity: 0.5;
+    }
+
+    &--ln:active {
+      background: url("../img/linkedin.svg") no-repeat center;
+      background-size: 17px;
+      opacity: 0.5;
+    }
+
+    &--codepen:active {
+      background: url("../img/codepen.svg") no-repeat center;
+      background-size: 20px;
+      opacity: 0.5;
+    }
+
+    &--git:hover {
+      background: url("../img/github--hover.svg") no-repeat center;
+      background-size: 17px;
+      opacity: 1;
+    }
+
+    &--gmail:hover {
+      background: url("../img/gmail--hover.svg") no-repeat center;
+      background-size: 20px;
+      opacity: 1;
+    }
+
+    &--ln:hover {
+      background: url("../img/linkedin--hover.svg") no-repeat center;
+      background-size: 17px;
+      opacity: 1;
+    }
+
+    &--codepen:hover {
+      background: url("../img/codepen--hover.svg") no-repeat center;
+      background-size: 20px;
+      opacity: 1;
+    }
+  }
+
+  .page-footer__copyrights {
+    order: 1;
+  }
+}

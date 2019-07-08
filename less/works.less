@@ -1,5 +1,7 @@
 .works {
   //background: rgba(255, 0, 255, 0.2); /*-----------------------------------------------------------------------------*/
+  margin: 0 auto;
+  max-width: 1903px;
   width: 100%;
   overflow: hidden;
 }
@@ -22,7 +24,7 @@
 
   transition: 2s;
   transform: scale(0.8);
-  transition-delay: 2s;
+  transition-delay: 1s;
   transform-origin: 50% 50%;
   opacity: 0;
 
@@ -273,6 +275,16 @@
 }
 
 @media @desktop-widths {
+  .works__wrapper {
+    padding-top: 130px;
+  }
+
+  //.works__slider-outer {
+  //  height: 1650px;
+  //  overflow: hidden;
+  //  background: rgba(255, 0, 0, 0.1);
+  //}
+
   .works__slider {
     width: 86vw;
     max-width: 1225px;
@@ -329,7 +341,7 @@
   }
 
   .works__img-container {
-    margin-right: 115px;
+    margin-right: 116px;
     margin-left: auto;
     padding-top: 0;
     width: 800px;
