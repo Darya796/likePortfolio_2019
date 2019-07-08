@@ -1,6 +1,6 @@
 .skills {
-  margin-top: 15px;
-  margin-bottom: 70px;
+  margin-top: 25px;
+  margin-bottom: 50px;
   width: 100%;
   //max-width: 450px;
 }
@@ -13,6 +13,17 @@
   margin: 0 auto;
   max-width: 350px;
   background: rgba(0, 0, 255, 0.1);
+
+  transition: 2s;
+  transform: scale(0.8);
+  transition-delay: 1.5s;
+  transform-origin: 50% 50%;
+  opacity: 0;
+
+  &--start {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .skills__item {
@@ -105,26 +116,197 @@
 
 @media (min-width: 580px) {
   .skills__list {
+    margin: 0;
+    padding-left: 36px;
     max-width: 490px;
   }
 
   .skills__item {
-    width: 48%;
+    width: 147px;
 
     &--4-5::after {
-      width: 215px;
+      width: 127px;
     }
 
     &--3-5::after {
-      width: 170px;
+      width: 82px;
     }
 
     &--2-5::after {
-      width: 144px;
+      width: 56px;
     }
 
     &--1-5::after {
-      width: 124px;
+      width: 36px;
     }
+  }
+}
+
+@media @tablet-widths {
+  .skills {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .skills__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-left: 0;
+    max-width: none;
+    background: rgba(0, 0, 255, 0.1);
+  }
+
+  .skills__item {
+    margin-bottom: 40px;
+    margin-right: 2%;
+    padding-bottom: 27px;
+    width: 317px;
+    font-size: 28px;
+
+    &::before {
+      height: 20px;
+    }
+
+    &::after {
+      height: 20px;
+    }
+
+    &--4-5::after {
+      width: 275px;
+    }
+
+    &--3-5::after {
+      width: 185px;
+    }
+
+    &--2-5::after {
+      width: 132px;
+    }
+
+    &--1-5::after {
+      width: 81px;
+    }
+  }
+
+  .skills__item__shadow {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+
+    &--4-5 {
+      right: 21px;
+      background: fade(@violet, 70%);
+      box-shadow: 21px 0 0 fade(@violet, 40%);
+    }
+
+    &--3-5 {
+      right: 111px;
+      background: fade(@violet, 90%);
+      box-shadow: 21px 0 0 fade(@violet, 70%),
+      42px 0 0 fade(@violet, 40%),
+      63px 0 0 fade(@violet, 20%);
+    }
+
+    &--2-5 {
+      right: 164px;
+      background: fade(@violet, 90%);
+      box-shadow: 21px 0 0 fade(@violet, 70%),
+      42px 0 0 fade(@violet, 40%),
+      63px 0 0 fade(@violet, 20%);
+    }
+
+    &--1-5 {
+      right: 215px;
+      background: fade(@violet, 90%);
+      box-shadow: 21px 0 0 fade(@violet, 70%),
+      42px 0 0 fade(@violet, 40%),
+      63px 0 0 fade(@violet, 20%);
+    }
+  }
+}
+
+@media @desktop-widths {
+  .skills {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    width: 100%;
+    height: 500px;
+    //overflow: hidden;
+    background: rgba(255, 0, 0, 0.1);
+  }
+
+  .skills__list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    padding-top: 36px;
+    width: 370px;
+    height: 86vw;
+    max-height: 1480px;
+    overflow: hidden;
+    //flex-direction: column;
+    //flex-wrap: nowrap;
+    //justify-content: space-between;
+    //align-items: flex-end;
+    //align-items: flex-start;
+    //justify-content: flex-start;
+    margin: 0;
+    background: rgba(0, 0, 255, 0.2);
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: bottom left;
+  }
+
+  .skills__item {
+    //flex-shrink: 0;
+    //display: block;
+    margin: 0;
+    margin-bottom: 5%;
+    //margin-right: 15%;
+    width: 100%;
+    //width: 370px;
+    //width: 100%;
+    //transform: rotate(-90deg) translateY(100%);
+    //transform-origin: bottom left;
+
+    background: rgba(0, 255, 255, 0.2);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--4-5::after {
+      width: 328px;
+    }
+
+    &--3-5::after {
+      width: 238px;
+    }
+
+    &--2-5::after {
+      width: 185px;
+    }
+
+    &--1-5::after {
+      width: 134px;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .skills__list {
+    padding-top: 26px;
+  }
+
+  .skills__item {
+    margin-bottom: 10%;
   }
 }
